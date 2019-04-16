@@ -43,6 +43,10 @@ const app = express()
   //   console.log(error)
   // })
 // })
+app.use('/', (req, res, next) => {
+  console.log(req.method)
+  next()
+})
 // 获取轮播图数据
 app.use('/api/getSwiperList', proxy({
   target: "https://c.y.qq.com",
@@ -193,6 +197,6 @@ app.get('/api/search', (req, res) => {
     console.log(error)
   })
 })
-app.listen(8080, () => {
+app.listen(9000, () => {
   console.log('开启9000端口')
 })
