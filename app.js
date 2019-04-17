@@ -197,6 +197,6 @@ app.get('/api/search', (req, res) => {
     console.log(error)
   })
 })
-app.listen(8081, () => {
-  console.log('开启8081端口')
+app.listen(80, () => {
+  console.log('开启80端口')
 })
